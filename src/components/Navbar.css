@@ -1,6 +1,33 @@
 /* Navbar.css */
-.navbar ul li .active {
-    font-weight: bold; /* Example styling for active link */
-    color: #007bff; /* Example color for active link */
+
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar li {
+    margin-right: 20px;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .navbar .active {
+    font-weight: bold;
+    color: #f39c12; /* Highlight color */
+  }
+  
+  .navbar a:hover {
+    color: #f39c12; /* Hover color */
   }
   

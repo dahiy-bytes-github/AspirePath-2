@@ -1,34 +1,37 @@
+// src/components/Navbar.js
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Logo from "./Logo"; // Import the Logo component
 import "./Navbar.css"; // Optional for styling
 
 const Navbar = () => {
   return (
     <nav className="navbar">
+      <Logo /> {/* Add Logo here */}
       <ul>
         <li>
-          <NavLink to="/" exact activeClassName="active">
+          <NavLink to="/" end className={({ isActive }) => (isActive ? "active" : "")}>
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/about" activeClassName="active">
+          <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}>
             About
           </NavLink>
         </li>
         <li>
-          <NavLink to="/account" activeClassName="active">
+          <NavLink to="/account" className={({ isActive }) => (isActive ? "active" : "")}>
             Account
           </NavLink>
         </li>
         <li>
-          <NavLink to="/mentors" activeClassName="active">
+          <NavLink to="/mentors" className={({ isActive }) => (isActive ? "active" : "")}>
             Mentors
           </NavLink>
         </li>
         <li>
-          <NavLink to="/profile" activeClassName="active">
-            Profile
+          <NavLink to="/usermanagement" className={({ isActive }) => (isActive ? "active" : "")}>
+            User Management
           </NavLink>
         </li>
       </ul>
