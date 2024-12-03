@@ -1,0 +1,6 @@
+/* Navbar.css */
+.navbar ul li .active {
+    font-weight: bold; /* Example styling for active link */
+    color: #007bff; /* Example color for active link */
+  }
+  

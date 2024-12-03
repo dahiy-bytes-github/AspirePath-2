@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "id": "9e32",
+      "firstName": "assdsd",
+      "lastName": "ddfd",
+      "email": "xsw@g.com",
+      "password": "qwerasdfg",
+      "role": "mentee",
+      "careerGoals": "Project Manager"
+    }
+  ]
+}
