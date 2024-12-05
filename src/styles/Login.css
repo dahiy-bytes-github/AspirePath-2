@@ -79,7 +79,8 @@ h2 {
 }
 
 .register-link {
-  color: #007bff;
+  background-color: #218838;
+  color: #218838; 
   text-decoration: none;
 }
 

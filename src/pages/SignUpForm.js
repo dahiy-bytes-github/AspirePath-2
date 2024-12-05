@@ -4,7 +4,7 @@ import { validateEmail } from "../utils";
 import "../styles/SignUpForm.css";
 
 const PasswordErrorMessage = () => {
-  return <p className="FieldError">Password should have at least 8 characters</p>;
+  return <p className="error-message">Password should have at least 8 characters</p>;
 };
 
 const SignUpForm = () => {
@@ -14,7 +14,7 @@ const SignUpForm = () => {
   const [password, setPassword] = useState({ value: "", isTouched: false });
   const [role, setRole] = useState("role");
   const [specificField, setSpecificField] = useState("");
-  const navigate = useNavigate(); // Redirect after registration
+  const navigate = useNavigate();
 
   const getIsFormValid = () => {
     return (
@@ -57,7 +57,6 @@ const SignUpForm = () => {
       if (response.ok) {
         alert("Account created!");
         clearForm();
-        // Redirect to HomePage after successful registration
         navigate("/");
       } else {
         alert("Failed to create account.");
@@ -76,13 +75,15 @@ const SignUpForm = () => {
   const renderSpecificField = () => {
     if (role === "mentor") {
       return (
-        <div className="Field">
-          <label>Expertise <sup>*</sup></label>
+        <div className="input-group">
           <select
             value={specificField}
             onChange={(e) => setSpecificField(e.target.value)}
+            className="input-field"
           >
-            <option value="">Select Expertise</option>
+            <option value="" disabled>
+              Expertise
+            </option>
             <option value="Software Development">Software Development</option>
             <option value="Backend Development">Backend Development</option>
             <option value="Frontend Development">Frontend Development</option>
@@ -94,13 +95,15 @@ const SignUpForm = () => {
 
     if (role === "mentee") {
       return (
-        <div className="Field">
-          <label>Career Goals <sup>*</sup></label>
+        <div className="input-group">
           <select
             value={specificField}
             onChange={(e) => setSpecificField(e.target.value)}
+            className="input-field"
           >
-            <option value="">Select Career Goal</option>
+            <option value="" disabled>
+              Career Goals
+            </option>
             <option value="Software Developer">Software Developer</option>
             <option value="Data Scientist">Data Scientist</option>
             <option value="Project Manager">Project Manager</option>
@@ -114,55 +117,50 @@ const SignUpForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <fieldset>
-        <h2>Sign Up</h2>
-        <div className="Field">
-          <label>
-            First name <sup>*</sup>
-          </label>
+    <div className="signup-container">
+      <h2>Sign Up</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="input-group">
           <input
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
-            placeholder="First name"
+            placeholder="First Name"
+            className="input-field"
           />
         </div>
-        <div className="Field">
-          <label>Last name</label>
+        <div className="input-group">
           <input
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
-            placeholder="Last name"
+            placeholder="Last Name"
+            className="input-field"
           />
         </div>
-        <div className="Field">
-          <label>
-            Email address <sup>*</sup>
-          </label>
+        <div className="input-group">
           <input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email address"
+            placeholder="Email"
+            className="input-field"
           />
         </div>
-        <div className="Field">
-          <label>
-            Password <sup>*</sup>
-          </label>
+        <div className="input-group">
           <input
             value={password.value}
             type="password"
             onChange={(e) => setPassword({ ...password, value: e.target.value })}
             onBlur={() => setPassword({ ...password, isTouched: true })}
             placeholder="Password"
+            className="input-field"
           />
           {password.isTouched && password.value.length < 8 && <PasswordErrorMessage />}
         </div>
-        <div className="Field">
-          <label>
-            Role <sup>*</sup>
-          </label>
-          <select value={role} onChange={handleRoleChange}>
+        <div className="input-group">
+          <select
+            value={role}
+            onChange={handleRoleChange}
+            className="input-field"
+          >
             <option value="role" disabled>
               Select Role
             </option>
@@ -171,13 +169,11 @@ const SignUpForm = () => {
           </select>
         </div>
         {renderSpecificField()}
-        <div className="Field">
-          <button type="submit" disabled={!getIsFormValid()}>
-            Sign Up
-          </button>
-        </div>
-      </fieldset>
-    </form>
+        <button type="submit" disabled={!getIsFormValid()} className="login-button">
+          Sign Up
+        </button>
+      </form>
+    </div>
   );
 };
 

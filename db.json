@@ -80,6 +80,15 @@
       "password": "12345678",
       "role": "mentee",
       "careerGoals": "Data Scientist"
+    },
+    {
+      "id": "50f1",
+      "firstName": "Curry ",
+      "lastName": "Lam",
+      "email": "c@l.com",
+      "password": "12345678",
+      "role": "mentee",
+      "careerGoals": "IT Manager"
     }
   ]
 }
