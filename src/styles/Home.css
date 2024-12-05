@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  
+  .mentor-welcome-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4; 
+  }
+  
+  .mentor-mentee-container {
+    flex: 2;
+  }
+  
+  .mentor-mentee-container img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover; 
+    display: block;
+    border-radius: 8px; 
+  }
+  
+  .welcome-text {
+    flex: 1;
+    padding: 160px;
+    background: linear-gradient(to bottom right, #ffa500, #ffcc66);
+    border-radius: 8px;
+    color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+  }
+  
+  .welcome-text h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .welcome-text p {
+    font-size: 1.2em;
+  }
+  
+  /* Mentor Profiles Section */
+  .mentor-profiles {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    margin: 40px auto; 
+    gap: 20px; 
+  }
+  
+  .mentor-card {
+    width: 200px; 
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mentor-card img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    margin-bottom: 10px;
+  }
+  
+  .mentor-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .mentor-card p {
+    margin: 0;
+    font-size: 1em;
+    color: #555;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .mentor-welcome-section {
+      flex-direction: column; 
+      height: auto; 
+    }
+  
+    .mentor-profiles {
+      flex-direction: column; 
+      align-items: center; 
+    }
+  
+    .mentor-card {
+      width: 90%; 
+    }
+  }

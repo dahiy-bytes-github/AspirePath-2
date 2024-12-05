@@ -1,15 +1,6 @@
 {
   "users": [
     {
-      "id": "9e32",
-      "firstName": "John",
-      "lastName": "Doe",
-      "email": "john.doe@example.ke",
-      "password": "password123",
-      "role": "mentee",
-      "careerGoals": "Software Engineer"
-    },
-    {
       "id": "8f74",
       "firstName": "Jane",
       "lastName": "Smith",
@@ -80,6 +71,15 @@
       "password": "sophia555",
       "role": "mentee",
       "careerGoals": "Cybersecurity Analyst"
+    },
+    {
+      "id": "1ce3",
+      "firstName": "dfertr",
+      "lastName": "erhty",
+      "email": "aa@gmail.com",
+      "password": "12345678",
+      "role": "mentee",
+      "careerGoals": "Data Scientist"
     }
   ]
 }
