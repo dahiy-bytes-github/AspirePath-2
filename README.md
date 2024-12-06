@@ -61,8 +61,11 @@ Repository Link: [AspirePath GitHub Repository](https://github.com/dahiy-bytes-g
      "resources": []
    }
  3.**Start the JSON server:**  
-     npm json-server --watch db.json --port 8001
+
+     npm json-server --watch db.json --port 8001  
+
 4.**3Run the Project:**  
+
     npm start  
     <br>
 ---
