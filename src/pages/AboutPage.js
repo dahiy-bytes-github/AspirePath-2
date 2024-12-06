@@ -1,19 +1,37 @@
-import React from "react";
+import React from 'react'
+import Mission from "../components/Mission";
+import Vision from "../components/Vision";
+import Values from '../components/Values'; // Adjust path as needed
+import Testimony from "../components/Testimony";
+import Footer from "../components/Footer";
+import "../styles/AboutPage.css";
+import "../styles/Footer.css";
 
-const AboutPage = () => {
+
+
+
+function AboutPage() {
   return (
-    <div className="about-container">
-      <h2>About Us</h2>
-      <p>
-        Welcome to our platform! We aim to connect mentors with mentees and
-        provide a collaborative space for learning and growth.
-      </p>
-      <p>
-        Whether you're seeking career guidance or want to share your expertise,
-        our platform is here to support you.
-      </p>
-    </div>
-  );
-};
+    <div>
+      <Mission/>
+      <Vision/>
+      <Values/>
+      <Testimony/>
+      <div className="testimonials">
+  {/* Testimonials content */}
+</div>
 
-export default AboutPage;
+<hr className="section-divider" />
+
+<div className="contact-details">
+  {/* Contact details content */}
+</div>
+
+      <Footer/>
+      
+      
+    </div>
+  )
+}
+
+export default AboutPage

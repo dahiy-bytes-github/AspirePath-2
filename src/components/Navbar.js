@@ -25,11 +25,6 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/mentors" className={({ isActive }) => (isActive ? "active" : "")}>
-            Mentors
-          </NavLink>
-        </li>
-        <li>
           <NavLink to="/usermanagement" className={({ isActive }) => (isActive ? "active" : "")}>
             User Management
           </NavLink>

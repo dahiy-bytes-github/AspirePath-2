@@ -1,13 +1,13 @@
 /* src/components/Logo.css */
 .logo-container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     margin: 20px;
   }
   
   .logo {
-    width: 100px;
+    width: 150px;
     height: auto;
   }
   

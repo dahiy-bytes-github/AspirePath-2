@@ -1,33 +1,32 @@
 /* Navbar.css */
 
 .navbar {
-    background-color: #333;
-    padding: 10px 20px;
-  }
-  
-  .navbar ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .navbar li {
-    margin-right: 20px;
-  }
-  
-  .navbar a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-  }
-  
-  .navbar .active {
-    font-weight: bold;
-    color: #f39c12; /* Highlight color */
-  }
-  
-  .navbar a:hover {
-    color: #f39c12; /* Hover color */
-  }
-  
+  background:linear-gradient(to bottom right, #6b6760, #5c5342);
+  padding: 10px 20px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  margin-right: 30px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar .active {
+  font-weight: bold;
+  color: #07b966; /* Highlight color */
+}
+
+.navbar a:hover {
+  color: #f39c12 !important;
+}
