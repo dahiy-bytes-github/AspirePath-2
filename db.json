@@ -6,7 +6,7 @@
       "lastName": "Smith",
       "email": "jane.smith@example.com",
       "password": "securepass456",
-      "role": "mentor",
+      "role": "mentee",
       "careerGoals": "CTO"
     },
     {
