@@ -36,10 +36,10 @@ function Footer() {
             <h5>About Us</h5>
             <ul>
               <li><a href="/about">About AspirePath</a></li>
-              <li><a href="#">Become a Partner</a></li>
+              <li><a href="/partner">Become a Partner</a></li>
               <li><a href="/blog">Blog</a></li>
               <li><a href="/team">Our Team</a></li>
-              <li><a href="#">Investor Relations</a></li>
+              <li><a href="/investor">Investor Relations</a></li>
             </ul>
           </div>
 
