@@ -1,9 +1,8 @@
-// src/components/Logo.js
 import React from "react";
 import "../styles/Logo.css"; // Optional, for styling
 
 const Logo = () => {
-  const imageUrl ="https://cdn.vanderbilt.edu/vu-web/medschool-wpcontent/sites/5/2019/11/20110210/ASPIRE-Rings-Circle-for-ASPIRE-ON-1.png"; // External image URL
+  const imageUrl ="https://aspiresd.org/wp-content/uploads/2020/11/logo-header-2x.png"; // External image URL
 
   return (
     <div className="logo-container">
@@ -12,4 +11,4 @@ const Logo = () => {
   );
 };
 
-export default Logo;
+export default Logo;

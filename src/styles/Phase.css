@@ -1,0 +1,80 @@
+.phase {
+  height: 70vh;
+  display: flex; /* Use flexbox for layout */
+  justify-content: flex-end; /* Align content to the right */
+  align-items: center; /* Vertically center content */
+  background-color: rgb(178, 143, 143);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px; /* Add some padding to avoid content touching edges */
+}
+
+.phase-content {
+  margin-right: -58%; /* Adjust spacing from the right edge */
+  padding: 0%;
+ 
+}
+
+.phase-content h1 {
+  font-size: 3em;
+  font-weight: bolder;
+  font-family: sans-serif;
+  margin-top: -1%;
+  color:  #ffcc66;
+}
+
+.phase-content p {
+  font-size: 2em;
+  font-family: "Times New Roman", Times, serif;
+  width: 50%;
+  margin-right: -55%;
+  
+}
+
+.mentor-container {
+  margin-right: 4%; /* Add spacing between mentor container and viewport edge */
+}
+
+.mentor-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .phase {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: center;
+  }
+
+  .phase-content {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .phase-content h1 {
+    font-size: 2em;
+  }
+
+  .phase-content p {
+    font-size: 1.5em;
+    width: 80%;
+  }
+
+  .mentor-container {
+    margin: 0;
+  }
+}
+
+@media (max-width: 458px) {
+  .phase-content p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 358px) {
+  .phase-content h1 {
+    font-size: 3em;
+  }
+}

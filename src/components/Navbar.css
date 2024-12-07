@@ -1,7 +1,10 @@
 /* Navbar.css */
 
 .navbar {
-  background:linear-gradient(to bottom right, #6b6760, #5c5342);
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  background: linear-gradient(to bottom right, #6b6760, #5c5342);
   padding: 10px 20px;
 }
 
@@ -16,6 +19,8 @@
   margin-right: 30px;
 }
 
+
+
 .navbar a {
   color: #fff;
   text-decoration: none;
@@ -29,4 +34,27 @@
 
 .navbar a:hover {
   color: #f39c12 !important;
+}
+
+.navbar li {
+  margin-right: 30px;
+}
+
+.navbar li:last-child {
+  margin-right: 0; 
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar .active {
+  font-weight: bold;
+  color: #07b966; 
+}
+
+.navbar a:hover {
+  color: #f39c12!important;
 }
