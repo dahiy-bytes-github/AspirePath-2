@@ -12,7 +12,7 @@ const LoginForm = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.get(`${apiUrl}/users`);
+      const response = await axios.get(`${apiUrl}`);
       const user = response.data.find(
         (user) => user.email === email && user.password === password
       );

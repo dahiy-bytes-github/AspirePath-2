@@ -5,7 +5,7 @@ import { apiUrl } from "../utils.js";
 // Fetch users moved outside the component
 const fetchUsers = async (setUsers) => {
   try {
-    const response = await fetch(`${apiUrl}/users`);
+    const response = await fetch(`${apiUrl}`);
     const data = await response.json();
     setUsers(data);
   } catch (error) {
