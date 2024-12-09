@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/Login.css";
+import { apiUrl } from "../utils.js";  // Corrected import
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -11,15 +12,14 @@ const LoginForm = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.get("http://localhost:8001/users");
+      const response = await axios.get(`${apiUrl}/users`);
       const user = response.data.find(
         (user) => user.email === email && user.password === password
       );
 
       if (user) {
         alert(`Welcome, ${user.firstName} ${user.lastName}!`);
-        // Redirect to the HomePage for both mentor and mentee
-        navigate("/");
+        navigate("/");  // Redirect on successful login
       } else {
         setErrorMessage("Invalid email or password.");
       }

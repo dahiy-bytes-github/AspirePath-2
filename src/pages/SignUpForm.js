@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { validateEmail } from "../utils";
+import { validateEmail, apiUrl } from "../utils";
 import "../styles/SignUpForm.css";
 
 const PasswordErrorMessage = () => {
@@ -48,7 +48,7 @@ const SignUpForm = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:8001/users", {
+      const response = await fetch(`${apiUrl}/users`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -81,9 +81,7 @@ const SignUpForm = () => {
             onChange={(e) => setSpecificField(e.target.value)}
             className="input-field"
           >
-            <option value="" disabled>
-              Expertise
-            </option>
+            <option value="" disabled>Expertise</option>
             <option value="Software Development">Software Development</option>
             <option value="Backend Development">Backend Development</option>
             <option value="Frontend Development">Frontend Development</option>
@@ -101,9 +99,7 @@ const SignUpForm = () => {
             onChange={(e) => setSpecificField(e.target.value)}
             className="input-field"
           >
-            <option value="" disabled>
-              Career Goals
-            </option>
+            <option value="" disabled>Career Goals</option>
             <option value="Software Developer">Software Developer</option>
             <option value="Data Scientist">Data Scientist</option>
             <option value="Project Manager">Project Manager</option>
@@ -161,9 +157,7 @@ const SignUpForm = () => {
             onChange={handleRoleChange}
             className="input-field"
           >
-            <option value="role" disabled>
-              Select Role
-            </option>
+            <option value="role" disabled>Select Role</option>
             <option value="mentor">Mentor</option>
             <option value="mentee">Mentee</option>
           </select>

@@ -5,8 +5,10 @@ import AboutPage from "./pages/AboutPage";
 import Account from "./pages/Account";
 import HomePage from "./pages/HomePage";
 import UserManagement from "./pages/UserManagement"; // Add UserManagement page
+import { apiUrl } from "./utils.js"
 
 function App() {
+  console.log("API URL:", apiUrl);
   return (
     <Router>
       <div>

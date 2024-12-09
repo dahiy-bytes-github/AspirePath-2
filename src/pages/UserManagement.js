@@ -1,5 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "../styles/UserManagement.css"; // Importing the CSS file
+import { apiUrl } from "../utils.js";
+
+// Fetch users moved outside the component
+const fetchUsers = async (setUsers) => {
+  try {
+    const response = await fetch(`${apiUrl}/users`);
+    const data = await response.json();
+    setUsers(data);
+  } catch (error) {
+    console.error("Error fetching users:", error);
+  }
+};
 
 const UserManagement = () => {
   const [users, setUsers] = useState([]);
@@ -8,21 +20,9 @@ const UserManagement = () => {
   const [editingUserId, setEditingUserId] = useState(null);
   const [editedUser, setEditedUser] = useState(null);
 
-  const apiUrl = "http://localhost:8001/users";
-
   useEffect(() => {
-    fetchUsers();
-  }, []);
-
-  const fetchUsers = async () => {
-    try {
-      const response = await fetch(apiUrl);
-      const data = await response.json();
-      setUsers(data);
-    } catch (error) {
-      console.error("Error fetching users:", error);
-    }
-  };
+    fetchUsers(setUsers);
+  }, []); // No dependency on fetchUsers here
 
   const deleteUser = async (id) => {
     try {
@@ -154,8 +154,18 @@ const UserManagement = () => {
                   />
                 </td>
                 <td>
-                  <button className="save-button" onClick={() => saveUser(editedUser)}>Save</button>
-                  <button className="cancel-button" onClick={handleCancelEdit}>Cancel</button>
+                  <button
+                    className="save-button"
+                    onClick={() => saveUser(editedUser)}
+                  >
+                    Save
+                  </button>
+                  <button
+                    className="cancel-button"
+                    onClick={handleCancelEdit}
+                  >
+                    Cancel
+                  </button>
                 </td>
               </tr>
             ) : (
